@@ -47,10 +47,10 @@ impl HLSLRegistry {
         profile: &str,
     ) -> Handle<Shader> {
         let p: PathBuf = path.into().into();
-        let profile = String::from(profile);
         // TODO skip this if not using "file_watcher" or "asset_processor" features.
         #[cfg(not(target_arch = "wasm32"))]
         {
+            let profile = String::from(profile);
             let h = asset_server.load_with_settings(path, move |s: &mut HLSLSettings| {
                 s.profile = profile.clone();
             });
@@ -108,6 +108,7 @@ impl AssetLoader for HLSLLoader {
             .arg("-T")
             .arg(&settings.profile)
             .arg("-spirv")
+            .arg("-fvk-use-gl-layout")
             .arg("-Fo")
             .arg(path.with_extension("spv"));
         if settings.profile.contains("ps_") {

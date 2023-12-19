@@ -221,8 +221,8 @@ impl FromWorld for PostProcessPipeline {
 
 #[derive(Component, Default, Clone, Copy, ExtractComponent, ShaderType)]
 struct PostProcessSettings {
-    padding: Vec3,
     intensity: f32,
+    padding: Vec3,
 }
 
 fn setup(

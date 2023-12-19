@@ -18,8 +18,8 @@ SamplerState texture_sampler;
 // Each element in the cbuffer needs to align to 16 bytes
 struct PostProcessSettings
 {
-    float3 padding;
     float intensity;
+    float3 padding;
 };
 
 // Uniform buffer for settings
