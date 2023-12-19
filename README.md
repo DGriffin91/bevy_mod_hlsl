@@ -8,3 +8,7 @@ Compilation requires [dxc](https://github.com/microsoft/DirectXShaderCompiler/re
 
 - Hot reloading
 - DX12 / Vulkan / WebGPU / WebGL2
+
+Useful resources for using hlsl with SPIR-V output (which this plugin does):
+https://github.com/microsoft/DirectXShaderCompiler/blob/main/docs/SPIR-V.rst
+https://github.com/microsoft/DirectXShaderCompiler/blob/main/docs/SPIRV-Cookbook.rst
