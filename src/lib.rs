@@ -81,7 +81,7 @@ impl HLSLRegistry {
 }
 
 #[derive(Asset, TypePath, Debug)]
-pub struct HLSLShader(PathBuf);
+pub struct HLSLShader(pub PathBuf);
 
 #[derive(Default)]
 struct HLSLLoader;
